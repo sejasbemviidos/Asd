@@ -3,77 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetCaucaia - Provedor de Internet de Alta Velocidade</title>
+    <title>Chrystian Serviços de Despachantes LTDA</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         :root {
-            --primary-color: #0066cc;
-            --secondary-color: #00aaff;
-            --accent-color: #ff6600;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-        }
-        
-        .navbar {
-            background-color: var(--primary-color) !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-        
-        .btn-accent {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-            color: white;
-        }
-        
-        .btn-accent:hover {
-            background-color: #ff8533;
-            border-color: #ff8533;
-            color: white;
+            --primary: #1a4f8c;
+            --secondary: #f8f9fa;
+            --accent: #ff6b00;
         }
         
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3') center/cover no-repeat;
             padding: 120px 0;
-            text-align: center;
-        }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
+            color: white;
         }
         
         .service-card {
@@ -81,131 +26,55 @@
             border: none;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             height: 100%;
-            border-radius: 10px;
-            overflow: hidden;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
         }
         
-        .icon-box {
-            width: 80px;
-            height: 80px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
+        .bg-primary-custom {
+            background-color: var(--primary);
         }
         
-        .icon-box i {
-            font-size: 2rem;
+        .btn-primary-custom {
+            background-color: var(--primary);
+            border-color: var(--primary);
             color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #0d3a66;
+            border-color: #0d3a66;
+        }
+        
+        .text-accent {
+            color: var(--accent);
         }
         
         .contact-info {
-            background-color: var(--light-color);
-            padding: 30px;
+            background-color: var(--secondary);
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         footer {
-            background-color: var(--dark-color);
-            color: white;
-        }
-        
-        .plan-card {
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s;
-            height: 100%;
-        }
-        
-        .plan-card:hover {
-            transform: scale(1.03);
-        }
-        
-        .plan-card.popular {
-            border: 2px solid var(--accent-color);
-            position: relative;
-        }
-        
-        .popular-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        
-        .benefit-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .benefit-list li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .benefit-list li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        
-        .testimonial-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            height: 100%;
-        }
-        
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-        
-        .coverage-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-        }
-        
-        .stats-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            background-color: #1a2937;
         }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="bi bi-wifi"></i> NetCaucaia
+                <h3 class="fw-bold mb-0 text-primary-custom">Chrystian Serviços</h3>
+                <p class="small mb-0">Despachantes LTDA</p>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -217,10 +86,7 @@
                         <a class="nav-link" href="#servicos">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#planos">Planos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cobertura">Cobertura</a>
+                        <a class="nav-link" href="#sobre">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
@@ -232,246 +98,90 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Internet de Alta Velocidade para Caucaia e Região</h1>
-            <p class="lead mb-4">Conectando você com o mundo, com a melhor qualidade e preço justo</p>
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-                <a href="#planos" class="btn btn-primary btn-lg">Conheça Nossos Planos</a>
-                <a href="#contato" class="btn btn-accent btn-lg">Fale Conosco</a>
-            </div>
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Soluções completas em despachante documentalista</h1>
+            <p class="lead mb-4">Agilidade, segurança e eficiência para resolver suas pendências documentais</p>
+            <a href="#contato" class="btn btn-primary-custom btn-lg px-4 py-2">Fale Conosco</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="servicos" class="py-5">
         <div class="container">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card text-center p-4">
-                        <div class="icon-box">
-                            <i class="bi bi-house-door"></i>
-                        </div>
-                        <h3>Internet Residencial</h3>
-                        <p>Velocidade e estabilidade para sua família navegar, trabalhar e se divertir. Conecte todos os seus dispositivos sem preocupação.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card text-center p-4">
-                        <div class="icon-box">
-                            <i class="bi bi-building"></i>
-                        </div>
-                        <h3>Internet Empresarial</h3>
-                        <p>Conectividade robusta e segura para impulsionar seu negócio. Links dedicados com garantia de uptime e suporte prioritário.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card text-center p-4">
-                        <div class="icon-box">
-                            <i class="bi bi-wifi"></i>
-                        </div>
-                        <h3>Wi-Fi de Alta Performance</h3>
-                        <p>Roteadores de última geração para garantir o sinal em todos os ambientes. Ideal para casas e empresas.</p>
-                    </div>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nossos Serviços</h2>
+                <p class="text-muted">Oferecemos uma gama completa de serviços documentais</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3 col-6 mb-4 mb-md-0">
-                    <div class="stats-number">+5.000</div>
-                    <p>Clientes Satisfeitos</p>
-                </div>
-                <div class="col-md-3 col-6 mb-4 mb-md-0">
-                    <div class="stats-number">99,7%</div>
-                    <p>Uptime Garantido</p>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stats-number">24/7</div>
-                    <p>Suporte Técnico</p>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="stats-number">100%</div>
-                    <p>Fibra Óptica</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Plans Section -->
-    <section id="planos" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Nossos Planos de Internet</h2>
-            <p class="text-center mb-5">Escolha o plano ideal para suas necessidades. Instalação gratuita e equipamentos inclusos.</p>
             
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card plan-card h-100">
-                        <div class="card-header bg-primary text-white py-3 text-center">
-                            <h3 class="mb-0">Plano Básico</h3>
-                        </div>
-                        <div class="card-body text-center">
-                            <h4 class="card-title">100 Mbps</h4>
-                            <div class="my-4">
-                                <span class="h2 text-primary">R$ 89,90</span>
-                                <span class="text-muted">/mês</span>
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary-custom rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-car-front-fill text-white fs-1"></i>
                             </div>
-                            <ul class="benefit-list text-start">
-                                <li>Download de 100 Mbps</li>
-                                <li>Upload de 50 Mbps</li>
-                                <li>Wi-Fi Dual Band incluso</li>
-                                <li>Instalação gratuita</li>
-                                <li>Suporte técnico 24h</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-white text-center py-3">
-                            <a href="#contato" class="btn btn-primary">Contratar Agora</a>
+                            <h4 class="card-title">Veículos</h4>
+                            <p class="card-text">Licenciamento, transferência, emplacamento, CRLV-e, e outros serviços automotivos.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="card plan-card popular h-100">
-                        <div class="popular-tag">Mais Popular</div>
-                        <div class="card-header bg-primary text-white py-3 text-center">
-                            <h3 class="mb-0">Plano Premium</h3>
-                        </div>
-                        <div class="card-body text-center">
-                            <h4 class="card-title">300 Mbps</h4>
-                            <div class="my-4">
-                                <span class="h2 text-primary">R$ 119,90</span>
-                                <span class="text-muted">/mês</span>
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary-custom rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-file-text-fill text-white fs-1"></i>
                             </div>
-                            <ul class="benefit-list text-start">
-                                <li>Download de 300 Mbps</li>
-                                <li>Upload de 150 Mbps</li>
-                                <li>Wi-Fi Mesh incluso</li>
-                                <li>Instalação gratuita</li>
-                                <li>Suporte prioritário</li>
-                                <li>Nobreak grátis por 12 meses</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-white text-center py-3">
-                            <a href="#contato" class="btn btn-accent">Contratar Agora</a>
+                            <h4 class="card-title">Documentos Pessoais</h4>
+                            <p class="card-text">CPF, RG, Passaporte, Carteira de Trabalho, Certidões e outros documentos.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="card plan-card h-100">
-                        <div class="card-header bg-primary text-white py-3 text-center">
-                            <h3 class="mb-0">Plano Gamer</h3>
-                        </div>
-                        <div class="card-body text-center">
-                            <h4 class="card-title">600 Mbps</h4>
-                            <div class="my-4">
-                                <span class="h2 text-primary">R$ 169,90</span>
-                                <span class="text-muted">/mês</span>
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary-custom rounded-circle p-3 d-inline-flex mb-3">
+                                <i class="bi bi-building-fill text-white fs-1"></i>
                             </div>
-                            <ul class="benefit-list text-start">
-                                <li>Download de 600 Mbps</li>
-                                <li>Upload de 300 Mbps</li>
-                                <li>Roteador Gamer profissional</li>
-                                <li>Prioridade em jogos online</li>
-                                <li>Latência ultrabaixa</li>
-                                <li>Instalação gratuita</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-white text-center py-3">
-                            <a href="#contato" class="btn btn-primary">Contratar Agora</a>
+                            <h4 class="card-title">Documentos Empresariais</h4>
+                            <p class="card-text">CNPJ, Alteração Contratual, Certidões, Alvarás e legalizações empresariais.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-5">
-                <p class="text-muted">*Preços promocionais para os primeiros 6 meses. Consulte condições.</p>
-            </div>
         </div>
     </section>
 
-    <!-- Coverage Section -->
-    <section id="cobertura" class="py-5">
+    <!-- About Section -->
+    <section id="sobre" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Nossa Cobertura</h2>
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Mapa de Cobertura">
-                        <div class="coverage-badge">Caucaia - CE</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Atendemos toda a região de Caucaia</h5>
-                            <p class="card-text">Nossa rede de fibra óptica cende principalmente o Parque Guadalajara (Jurema) e regiões próximas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h3>Verifique se sua região tem cobertura</h3>
-                    <p>Informe seu CEP para verificar a disponibilidade da nossa internet de alta velocidade na sua região.</p>
-                    <form class="mt-4">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg" placeholder="Digite seu CEP" aria-label="CEP">
-                            <button class="btn btn-primary" type="button">Verificar Cobertura</button>
-                        </div>
-                    </form>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Sobre Nossa Empresa</h2>
+                    <p class="lead">Há anos no mercado, a Chrystian Serviços de Despachantes LTDA oferece serviços de qualidade com agilidade e transparência.</p>
+                    <p>Nossa missão é simplificar os processos burocráticos para nossos clientes, oferecendo soluções eficientes e personalizadas para cada necessidade.</p>
                     <div class="mt-4">
-                        <h5>Bairros com cobertura total:</h5>
-                        <ul>
-                            <li>Parque Guadalajara (Jurema)</li>
-                            <li>Centro de Caucaia</li>
-                            <li>Parque Soledade</li>
-                            <li>Parque São José</li>
-                        </ul>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-accent me-2"></i>
+                            <span>Profissionais qualificados e experientes</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-accent me-2"></i>
+                            <span>Atendimento personalizado</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-accent me-2"></i>
+                            <span>Transparência em todos os processos</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-accent me-2"></i>
+                            <span>Compromisso com prazos e resultados</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">O que nossos clientes dizem</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="testimonial-avatar">
-                            <div>
-                                <h5 class="mb-0">Carlos Silva</h5>
-                                <p class="text-muted mb-0">Parque Guadalajara</p>
-                            </div>
-                        </div>
-                        <p class="mb-0">"Contratei a NetCaucaia há 6 meses e a internet é estável e rápida. O suporte técnico é muito eficiente e sempre me atendem rapidamente."</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="testimonial-avatar">
-                            <div>
-                                <h5 class="mb-0">Maria Santos</h5>
-                                <p class="text-muted mb-0">Jurema</p>
-                            </div>
-                        </div>
-                        <p class="mb-0">"Excelente provedor! A internet nunca cai e a velocidade é sempre constante. Melhor que as grandes operadoras e com preço mais justo."</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Cliente" class="testimonial-avatar">
-                            <div>
-                                <h5 class="mb-0">João Oliveira</h5>
-                                <p class="text-muted mb-0">Caucaia</p>
-                            </div>
-                        </div>
-                        <p class="mb-0">"Atendimento de qualidade e internet de alta velocidade. Perfeita para trabalhar em home office e para streaming em 4K."</p>
-                    </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3" alt="Escritório" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -480,82 +190,97 @@
     <!-- Contact Section -->
     <section id="contato" class="py-5">
         <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Entre em Contato</h2>
+                <p class="text-muted">Estamos à disposição para atendê-lo</p>
+            </div>
+            
             <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="contact-info h-100">
-                        <h3 class="mb-4">Informações de Contato</h3>
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
-                                <strong>Endereço:</strong><br>
-                                Rua Tampico, 2079 Galpão<br>
-                                Parque Guadalajara (Jurema)<br>
-                                Caucaia - CE<br>
-                                CEP: 61650-210
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-telephone-fill text-primary me-2"></i>
-                                <strong>Telefone:</strong> (85) 9999-9999
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-whatsapp text-primary me-2"></i>
-                                <strong>WhatsApp:</strong> (85) 98888-8888
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-envelope-fill text-primary me-2"></i>
-                                <strong>Email:</strong> contato@netcaucaia.com.br
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-file-text-fill text-primary me-2"></i>
-                                <strong>CNPJ:</strong> 18.563.238/0001-90
-                            </li>
-                        </ul>
-                        <div class="mt-4">
-                            <h4>Horário de Atendimento</h4>
-                            <p>Segunda a Sexta: 8h às 18h<br>
-                            Sábado: 9h às 13h</p>
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nome" class="form-label">Nome completo</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="telefone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="telefone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="servico" class="form-label">Serviço de interesse</label>
+                                    <select class="form-select" id="servico">
+                                        <option selected>Selecione um serviço</option>
+                                        <option value="veiculos">Serviços de Veículos</option>
+                                        <option value="pessoais">Documentos Pessoais</option>
+                                        <option value="empresariais">Documentos Empresariais</option>
+                                        <option value="outros">Outros serviços</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary-custom px-4 py-2">Enviar Mensagem</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card p-4 h-100">
-                        <h3 class="mb-4">Solicite uma Visita</h3>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="nome" class="form-label">Nome completo</label>
-                                    <input type="text" class="form-control" id="nome" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="telefone" class="form-label">Telefone</label>
-                                    <input type="tel" class="form-control" id="telefone" required>
-                                </div>
+                
+                <div class="col-lg-5">
+                    <div class="contact-info shadow">
+                        <h4 class="fw-bold mb-4">Informações de Contato</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3 mt-2">
+                                <i class="bi bi-geo-alt-fill text-accent fs-4"></i>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email">
+                            <div>
+                                <h5>Endereço</h5>
+                                <p class="mb-0">Avenida Norte Miguel Arraes de Alencar, 3003</p>
+                                <p class="mb-0">Térreo - Encruzilhada</p>
+                                <p class="mb-0">Recife - PE, CEP: 52041-080</p>
                             </div>
-                            <div class="mb-3">
-                                <label for="endereco" class="form-label">Endereço</label>
-                                <input type="text" class="form-control" id="endereco" required>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3 mt-2">
+                                <i class="bi bi-telephone-fill text-accent fs-4"></i>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="bairro" class="form-label">Bairro</label>
-                                    <input type="text" class="form-control" id="bairro" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="cep" class="form-label">CEP</label>
-                                    <input type="text" class="form-control" id="cep" required>
-                                </div>
+                            <div>
+                                <h5>Telefone</h5>
+                                <p class="mb-0">(81) 3333-3333</p>
+                                <p class="mb-0">(81) 99999-9999 (WhatsApp)</p>
                             </div>
-                            <div class="mb-3">
-                                <label for="mensagem" class="form-label">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-3 mt-2">
+                                <i class="bi bi-envelope-fill text-accent fs-4"></i>
                             </div>
-                            <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
-                        </form>
+                            <div>
+                                <h5>E-mail</h5>
+                                <p class="mb-0">contato@chrystiandespachantes.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="me-3 mt-2">
+                                <i class="bi bi-clock-fill text-accent fs-4"></i>
+                            </div>
+                            <div>
+                                <h5>Horário de Funcionamento</h5>
+                                <p class="mb-0">Segunda a Sexta: 8h às 18h</p>
+                                <p class="mb-0">Sábado: 8h às 12h</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -563,39 +288,54 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4">
+    <footer class="text-white py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5>NetCaucaia</h5>
-                    <p>Provedor de internet de alta velocidade para Caucaia e região. Conectando você com o mundo.</p>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="fw-bold mb-4">Chrystian Serviços</h4>
+                    <p>Oferecemos serviços de despachante documentalista com qualidade, agilidade e transparência.</p>
+                    <p>CNPJ: 32.692.814/0001-20</p>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5>Links Rápidos</h5>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#inicio" class="text-white">Início</a></li>
-                        <li><a href="#servicos" class="text-white">Serviços</a></li>
-                        <li><a href="#planos" class="text-white">Planos</a></li>
-                        <li><a href="#contato" class="text-white">Contato</a></li>
+                        <li class="mb-2"><a href="#inicio" class="text-white text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white text-decoration-none">Sobre</a></li>
+                        <li><a href="#contato" class="text-white text-decoration-none">Contato</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5>Redes Sociais</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Nossos Serviços</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Documentos de Veículos</li>
+                        <li class="mb-2">Documentos Pessoais</li>
+                        <li>Documentos Empresariais</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Redes Sociais</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="my-4 bg-light">
+            
+            <hr class="my-4">
+            
             <div class="text-center">
-                <p class="mb-0">&copy; 2023 NetCaucaia - Provedor de Internet. Todos os direitos reservados.</p>
+                <p class="mb-0">&copy; 2023 Chrystian Serviços de Despachantes LTDA. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
